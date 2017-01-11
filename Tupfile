@@ -1,5 +1,5 @@
 CFLAGS = -g -Wall -Wextra -std=c++11 -Iinclude/
-SRC = src/buffer.cpp
+SRC = src/buffer.cpp src/source.cpp
 
 : foreach $(SRC) |> g++ -c %f -o %o $(CFLAGS) |> %B.o
 : *.o |> ar rcs %o %f |> libsound.a
